@@ -31,6 +31,10 @@ handle /* {
   try_files ./tests-server/{path}.html {path}
 }
 
+handle / {
+  try_files ./tests-server/index.html {path}
+}
+
 mercure {
   publisher_jwt key
   subscriber_jwt key
